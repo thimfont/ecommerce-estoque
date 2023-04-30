@@ -17,6 +17,6 @@ public class EstoqueController {
     @GetMapping("/disponivel")
     public ResponseEntity<EstoqueResponse> produtoDisponivel(@RequestParam Long id, @RequestParam int quantidade) {
 
-        return ResponseEntity.ok(service.produtoDisponivel(id, quantidade));
+        return ResponseEntity.ok(service.reservaSeProdutoDisponivel(id, quantidade));
     }
 }
